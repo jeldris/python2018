@@ -1,7 +1,7 @@
 import csv
 import matplotlib.pyplot as plt
-f = open('¼öÇà¤·.csv')
-p = input('¾îµğ»ç½Ê´Ï±î?ex:/È¿ÀÚµ¿:')
+f = open('ìˆ˜í–‰ã…‡.csv')
+p = input('ì–´ë””ì‚¬ì‹­ë‹ˆê¹Œ?ex:/íš¨ìë™:')
 data = csv.reader(f)
 place = []
 for row in data :
@@ -9,51 +9,51 @@ for row in data :
         for i in range(3,len(row),3) : 
             place.append(int(row[i]))
         plt.plot(place)
-        plt.title(row[0]+'½Å»ı¾Æ ¼ö') 
+        plt.title(row[0]+'ì‹ ìƒì•„ ìˆ˜') 
         plt.rc('font',family='Malgun Gothic') 
-        plt.xticks(range(6),['2017³â12¿ù','2018³â1¿ù','2018³â2¿ù','2018³â3¿ù','2018³â4¿ù','2008³â5¿ù')]
-        plt.xlabel('³âµµ') 
-        plt.ylabel('¼ö') 
+        plt.xticks(range(6),['2017ë…„12ì›”','2018ë…„1ì›”','2018ë…„2ì›”','2018ë…„3ì›”','2018ë…„4ì›”','2008ë…„5ì›”')]
+        plt.xlabel('ë…„ë„') 
+        plt.ylabel('ìˆ˜') 
         plt.ylim(0,70) 
 	plt.show()
-    else:
-        print('±×·±°÷Àº Á¸ÀçÇÏÁö¾Ê½À´Ï´Ù.´Ù½Ã½ÃµµÇØÁÖ¼¼¿ä')
-    (break)
-#¿©±â »¡°£ ºÎºĞÀº Æ²¸°°÷ÀÌ ¸¶¶¥È÷ º¸ÀÌÁö ¾Ê¾Ò´Âµ¥ ¿À·ù°¡ ½ÉÇß°í breakÀÌ¶ó´Â °ÍÀ» ³Ö¾î¼­ ¹İº¹À¸·Î ¸ØÃß·Á°í ÇÏ¿©µµ ¾ÈµÇ¾î¾î¼­ ÀÏ´Ü ½ÇÁ¦ ÇÒ¶§´Â Á¦¿Ü ½ÃÄ×´Ù.
+    #else:
+       # print('ê·¸ëŸ°ê³³ì€ ì¡´ì¬í•˜ì§€ì•ŠìŠµë‹ˆë‹¤.ë‹¤ì‹œì‹œë„í•´ì£¼ì„¸ìš”')
+    #(break)
+#ì—¬ê¸° ë¹¨ê°„ ë¶€ë¶„ì€ í‹€ë¦°ê³³ì´ ë§ˆë•…íˆ ë³´ì´ì§€ ì•Šì•˜ëŠ”ë° ì˜¤ë¥˜ê°€ ì‹¬í–ˆê³  breakì´ë¼ëŠ” ê²ƒì„ ë„£ì–´ì„œ ë°˜ë³µìœ¼ë¡œ ë©ˆì¶”ë ¤ê³  í•˜ì—¬ë„ ì•ˆë˜ì–´ì–´ì„œ ì¼ë‹¨ ì‹¤ì œ í• ë•ŒëŠ” ì œì™¸ ì‹œì¼°ë‹¤.
 
         plt.show()
-k = input('³²³à½Å»ı¾Æ ¼ººñ¸¦ ¾Ë°í½Í½À´Ï±î?')
+k = input('ë‚¨ë…€ì‹ ìƒì•„ ì„±ë¹„ë¥¼ ì•Œê³ ì‹¶ìŠµë‹ˆê¹Œ?')
 woman = 0
 man = 0
-if k == '³×' :
+if k == 'ë„¤' :
     for row in data :
         if p in row[0] :
             for z in (1,16,3) :
                 woman = woman + int(row[z])           
             for q in (2,17,3) :
                 man = man + int(row[q])
-    plt.pie([woman ,man], labels = ['³²','³à'], autopct='%1.1f%%')
+    plt.pie([woman ,man], labels = ['ë‚¨','ë…€'], autopct='%1.1f%%')
     colors = ['red', 'blue']  
-    plt.title('³²³à ½Å»ı¾Æ¼ö ºñÀ²')
+    plt.title('ë‚¨ë…€ ì‹ ìƒì•„ìˆ˜ ë¹„ìœ¨')
     plt.rc('font',family='Malgun Gothic') 
     plt.axis('equal')
     plt.show()
 else :
-    print('ÀÌ¿ëÇØÁÖ¼Å¼­ °¨»çÇÕ´Ï´Ù.')
-e = input('±¸³»¿¡¼­ÀÇ ºñÀ²À» ¾Ë°í½Í½À´Ï±î?')
+    print('ì´ìš©í•´ì£¼ì…”ì„œ ê°ì‚¬í•©ë‹ˆë‹¤.')
+e = input('êµ¬ë‚´ì—ì„œì˜ ë¹„ìœ¨ì„ ì•Œê³ ì‹¶ìŠµë‹ˆê¹Œ?')
 gu = []
 glit = []
-if e == '³×' :
-    m=input('±¸¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä')
+if e == 'ë„¤' :
+    m=input('êµ¬ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”')
     if m in row[0] :
         for i in range(3,len(row),3) : 
             gu.append(int(row[i]))
-            date= ['2017³â12¿ù','2018³â1¿ù','2018³â2¿ù','2018³â3¿ù','2018³â4¿ù','2018³â5¿ù']
+            date= ['2017ë…„12ì›”','2018ë…„1ì›”','2018ë…„2ì›”','2018ë…„3ì›”','2018ë…„4ì›”','2018ë…„5ì›”']
             for i in range(5) :
                 glit.append(place[i]/gu[i])
-            plt.bar(range(4),date , width = 0.4, label='ºñÀ²')
+            plt.bar(range(4),date , width = 0.4, label='ë¹„ìœ¨')
             plt.xticks([0,1,2,3,4,], glit)
             plt.legend()
             plt.show()
 else:
-    print('ÀÌ¿ëÇØÁÖ¼Å¼­ °¨»çÇÕ´Ï´Ù.') 
+    print('ì´ìš©í•´ì£¼ì…”ì„œ ê°ì‚¬í•©ë‹ˆë‹¤.') 
