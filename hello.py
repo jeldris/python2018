@@ -11,7 +11,7 @@ for row in data :
         plt.plot(place)
         plt.title(row[0]+'신생아 수') 
         plt.rc('font',family='Malgun Gothic') 
-        plt.xticks(range(6),['2017년12월','2018년1월','2018년2월','2018년3월','2018년4월','2008년5월')]
+        plt.xticks(range(6),['2017년12월','2018년1월','2018년2월','2018년3월','2018년4월','2018년5월')]
         plt.xlabel('년도') 
         plt.ylabel('수') 
         plt.ylim(0,70) 
@@ -21,7 +21,7 @@ for row in data :
     #(break)
 #여기 부분은 틀린곳이 마땅히 보이지 않았는데 오류가 심했고 break이라는 것을 넣어서 반복으로 멈추려고 하여도 안되어어서 일단 실제 할때는 제외 시켰다.
 
-        plt.show()
+        
 k = input('남녀신생아 성비를 알고싶습니까?')
 woman = 0
 man = 0
@@ -40,6 +40,7 @@ if k == '네' :
     plt.show()
 else :
     print('이용해주셔서 감사합니다.')
+
 e = input('구내에서의 비율을 알고싶습니까?')
 gu = []
 glit = []
@@ -57,3 +58,4 @@ if e == '네' :
             plt.show()
 else:
     print('이용해주셔서 감사합니다.') 
+#여기 부분은 완성하고 싶었으나 아이디어가 부족하였다.
