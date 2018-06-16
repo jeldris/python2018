@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 f = open('수행ㅇ.csv')
 p = input('어디사십니까?ex:/효자동:')
 data = csv.reader(f)
+data = list(data)
 place = []
 for row in data :
     if p in row[0] :
